@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">JobLogicAssessment</string>
+    <string name="title_call">Call</string>
+    <string name="title_buy">Buy</string>
+    <string name="title_sell">Sell</string>
+
+
+    <string name="no_data_found">Data not found</string>
+    <string name="name">Name :</string>
+    <string name="number">Number :</string>
+    <string name="price">Price :</string>
+    <string name="quantity">Quantity :</string>
+    <string name="type">Type :</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="todo_app">Todo App</string>
+</resources>

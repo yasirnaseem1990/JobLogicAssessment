@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.joblogic.assessment.view.fragment.buy.BuyListItemViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_margin="@dimen/_8sdp"
+        android:elevation="@dimen/_20sdp"
+        android:backgroundTint="@color/white"
+        android:foreground="?android:attr/selectableItemBackground">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_12sdp">
+
+
+            <TextView
+                android:id="@+id/tvLabelName"
+                style="@style/textViewLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Name :" />
+
+            <TextView
+                android:id="@+id/tvName"
+                style="@style/textViewStyleTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@{viewModel.name}"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLabelName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvQuantity"
+                app:layout_constraintTop_toTopOf="@+id/tvLabelName"
+                tools:text="Christiano Ronaldo" />
+
+            <TextView
+                android:id="@+id/labelPrice"
+                style="@style/textViewLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/price"
+                app:layout_constraintStart_toStartOf="@+id/tvLabelName"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelName" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                style="@style/textViewLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:alpha="0.50"
+                android:text="@{viewModel.price}"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@+id/labelPrice"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvQuantity"
+                app:layout_constraintTop_toTopOf="@+id/labelPrice"
+                tools:text="205000" />
+
+            <TextView
+                style="@style/textViewLabel"
+                android:id="@+id/labelQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/quantity"
+                app:layout_constraintStart_toStartOf="@+id/labelPrice"
+                app:layout_constraintTop_toBottomOf="@+id/labelPrice" />
+
+            <TextView
+                android:id="@+id/tvQuantity"
+                style="@style/textViewLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:alpha="0.50"
+                android:text="@{viewModel.quantity}"
+                app:layout_constraintBottom_toBottomOf="@+id/labelQuantity"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/labelQuantity"
+                app:layout_constraintTop_toTopOf="@+id/labelQuantity"
+                tools:text="2" />
+
+            <TextView
+                style="@style/textViewLabel"
+                android:id="@+id/labelType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/type"
+                app:layout_constraintStart_toStartOf="@+id/labelQuantity"
+                app:layout_constraintTop_toBottomOf="@+id/labelQuantity" />
+
+            <TextView
+                android:id="@+id/tvType"
+                style="@style/textViewLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:alpha="0.50"
+                android:text="@{viewModel.type}"
+                app:layout_constraintBottom_toBottomOf="@+id/labelType"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvQuantity"
+                app:layout_constraintTop_toTopOf="@+id/labelType"
+                tools:text="1" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
